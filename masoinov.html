@@ -27,7 +27,6 @@
           overflow-x: hidden;
           position: relative;
           z-index: 1;
-          /* один мягкий фиолетовый градиент, который следует за мышкой (чуть темнее) */
           background: radial-gradient(600px at var(--mouse-x, 50%) var(--mouse-y, 50%), #5a1ce1, #18181f, #050505) fixed;
           transition: background-position 0.15s ease-out;
         }
@@ -38,11 +37,11 @@
           max-width: 800px;
           margin: 0 auto 40px;
           padding: 40px 30px;
-          background: rgba(255, 255, 255, 0.08); /* чуть темнее, чем было */
+          background: rgba(255, 255, 255, 0.08); 
           backdrop-filter: blur(12px);
           border-radius: 20px;
           border: 1px solid rgba(255, 255, 255, 0.2);
-          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35); /* чуть жёстче тень */
+          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35); 
           overflow: hidden;
         }
 
@@ -287,10 +286,10 @@
         </a>
     </div>
 
-    <!-- Кнопка для включения/выключения музыки была удалена -->
+
 </div>
 
-<!-- Скрипт для слежения фона за курсором -->
+
 <script>
   function setMouseGrad(x, y) {
     document.body.style.setProperty('--mouse-x', x + 'px');
@@ -303,7 +302,7 @@
     setMouseGrad(x, y);
   });
 
-  // инициализация на случай, если есть тач‑девайсы
+ 
   if ('ontouchstart' in window) {
     document.addEventListener('touchmove', (e) => {
       if (e.touches.length > 0) {
